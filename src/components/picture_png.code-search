@@ -1,0 +1,9 @@
+# Query: picture.png
+# ContextLines: 1
+
+1 result - 1 file
+
+src\components\Hero.jsx:
+  2  import { gsap } from 'gsap';
+  3: import pictureImg from '../assets/Portfolio/Harika.png';
+  4  

@@ -7,34 +7,52 @@ gsap.registerPlugin(ScrollTrigger);
 const expertiseData = [
   {
     number: "01",
+    tag: "FRONTEND",
     title: "Frontend Development",
-    text: "Crafting responsive, high-fidelity user interfaces with React, modern JavaScript, Tailwind CSS, and buttery smooth GSAP motion interactions.",
-    tag: "UI / UX & INTERACTION",
-    gradient: "from-[#1f0a0c] via-[#121212] to-[#0a0a0a]"
+    text: "Building responsive and interactive web interfaces using React, JavaScript, HTML, CSS, and Tailwind CSS with a focus on clean and user-friendly experiences.",
+    gradient: "from-[#151515] via-[#101010] to-[#180000]"
   },
+
   {
     number: "02",
+    tag: "BACKEND",
     title: "Backend Development",
-    text: "Architecting secure REST APIs, enterprise authentication pipelines, and scalable database schemas across PostgreSQL and MongoDB.",
-    tag: "API & ARCHITECTURE",
-    gradient: "from-[#1a0809] via-[#111111] to-[#090909]"
+    text: "Developing backend services and REST APIs using Python, FastAPI, Node.js, and Express for reliable and scalable application workflows.",
+    gradient: "from-[#151515] via-[#101010] to-[#180000]"
   },
+
   {
     number: "03",
-    title: "AI & Machine Learning",
-    text: "Integrating production-grade LLM workflows, predictive machine learning pipelines, and computer vision systems backed by AWS AI certification.",
-    tag: "INTELLIGENCE & ML",
-    gradient: "from-[#220a0d] via-[#131313] to-[#0a0a0a]"
+    tag: "CLOUD & AWS",
+    title: "Cloud & AWS",
+    text: "Working with AWS services, EC2, CloudWatch, AWS SDK, and Kinesis to build and monitor cloud-based application and infrastructure solutions.",
+    gradient: "from-[#151515] via-[#101010] to-[#180000]"
   },
+
   {
     number: "04",
-    title: "Cloud & Deployment",
-    text: "Deploying resilient, containerized multi-tenant services using Docker, GitHub Actions CI/CD workflows, and optimized cloud hosting.",
-    tag: "DEVOPS & CLOUD",
-    gradient: "from-[#1d090b] via-[#101010] to-[#080808]"
+    tag: "OBSERVABILITY",
+    title: "Observability Engineering",
+    text: "Building monitoring and observability pipelines using OpenTelemetry, Grafana, Prometheus, Tempo, and ClickHouse for metrics, tracing, and visualization.",
+    gradient: "from-[#151515] via-[#101010] to-[#180000]"
+  },
+
+  {
+    number: "05",
+    tag: "DEVOPS",
+    title: "DevOps & Containers",
+    text: "Working with Docker, Docker Compose, Git, GitHub, and containerized development environments to build and manage modern application workflows.",
+    gradient: "from-[#151515] via-[#101010] to-[#180000]"
+  },
+
+  {
+    number: "06",
+    tag: "PROGRAMMING",
+    title: "Programming & Problem Solving",
+    text: "Applying Python and JavaScript along with data structures, algorithms, and logical problem-solving techniques to develop efficient solutions.",
+    gradient: "from-[#151515] via-[#101010] to-[#180000]"
   }
 ];
-
 const Expertise = () => {
   const containerRef = useRef(null);
   const cardRefs = useRef([]);
@@ -108,9 +126,9 @@ const Expertise = () => {
               <span>CORE COMPETENCIES</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
-              DIRECTOR'S CUT <br />
+              MY EXPERTISE <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-600 to-red-700 drop-shadow-[0_0_25px_rgba(229,9,20,0.35)]">
-                TECHNICAL CAPABILITIES.
+                TECHNICAL SKILLS.
               </span>
             </h2>
           </div>
