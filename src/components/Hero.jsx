@@ -316,6 +316,7 @@ const Hero = () => {
 
   return (
     <section
+      id="home"
       ref={sectionRef}
       className="relative w-full bg-[#050505] overflow-hidden flex flex-col select-none cursor-default lg:cursor-none min-h-[100svh] lg:h-screen"
     >
@@ -758,7 +759,7 @@ const Hero = () => {
         {/* HIRE BUTTON */}
 
         <a
-          href="#hire"
+          href="#contact"
           className="px-4 sm:px-5 py-2 rounded bg-red-600 hover:bg-red-700 text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(229,9,20,0.6)] hover:scale-105 active:scale-95"
         >
           Hire Me
