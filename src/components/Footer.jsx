@@ -51,7 +51,7 @@ const Footer = () => {
               href="#internships"
               className="hover:text-red-500 transition-colors"
             >
-              Projects
+              internships
             </a>
 
             <a
@@ -100,7 +100,7 @@ const Footer = () => {
 
           {/* Location */}
           <div className="text-white/40 tracking-widest uppercase">
-            LOCATION: INDIA
+            LOCATION: Andhra Pradesh,INDIA
           </div>
 
         </div>

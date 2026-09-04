@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+@theme  {
   --animate-float: float 6s ease-in-out infinite;
 
   @keyframes float {
