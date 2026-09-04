@@ -48,7 +48,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="#projects"
+              href="#internships"
               className="hover:text-red-500 transition-colors"
             >
               Projects

@@ -5,15 +5,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // ============================================================
-// INTERNSHIP DATA
+// PROJECT DATA
 // ============================================================
 
-const internshipsData = [
+const projectsData = [
   {
     title: "AWS Observability Pipeline",
     category: "CLOUD & OBSERVABILITY",
-    company: "LEMICI IQ",
-    duration: "March 2026 – August 2026",
     description:
       "Built an end-to-end AWS metrics observability pipeline using OpenTelemetry, AWS services, ClickHouse, and Grafana for collecting, storing, and visualizing infrastructure metrics.",
     tags: ["AWS", "OpenTelemetry", "Grafana", "ClickHouse"],
@@ -23,8 +21,6 @@ const internshipsData = [
   {
     title: "OpenTelemetry Metrics Platform",
     category: "OBSERVABILITY",
-    company: "LEMICI IQ",
-    duration: "March 2026 – August 2026",
     description:
       "Developed a push-based metrics pipeline using OpenTelemetry Python SDK and OTLP, integrating the OTel Collector with ClickHouse.",
     tags: ["Python", "OTel", "OTLP", "ClickHouse"],
@@ -34,8 +30,6 @@ const internshipsData = [
   {
     title: "Grafana Monitoring Dashboard",
     category: "MONITORING",
-    company: "LEMICI IQ",
-    duration: "March 2026 – August 2026",
     description:
       "Created monitoring dashboards for infrastructure and application metrics using Grafana and Prometheus.",
     tags: ["Grafana", "Prometheus", "Docker", "Monitoring"],
@@ -45,8 +39,6 @@ const internshipsData = [
   {
     title: "WordPress Web Development",
     category: "WEB DEVELOPMENT",
-    company: "GAO TEK",
-    duration: "March 2026 – July 2026",
     description:
       "Developed and customized responsive WordPress websites using Elementor, themes, plugins, custom CSS, forms and menus.",
     tags: ["WordPress", "Elementor", "CSS", "JavaScript"],
@@ -56,8 +48,6 @@ const internshipsData = [
   {
     title: "Kong API Observability",
     category: "API & DISTRIBUTED TRACING",
-    company: "LEMICI IQ",
-    duration: "March 2026 – August 2026",
     description:
       "Worked with Kong API Gateway and OpenTelemetry to build distributed tracing and observability for API-based services.",
     tags: ["Kong", "OpenTelemetry", "Tracing", "APIs"],
@@ -67,7 +57,7 @@ const internshipsData = [
 ];
 
 // ============================================================
-// INTERNSHIPS COMPONENT
+// PROJECTS COMPONENT
 // ============================================================
 
 const Projects = () => {
@@ -338,7 +328,7 @@ const Projects = () => {
 
   return (
     <section
-      id="projects"
+      id="internships"
       ref={containerRef}
       className="
         bg-[#0b0b0b]
@@ -388,7 +378,7 @@ const Projects = () => {
             uppercase
           "
         >
-          EXPERIENCE
+          ORIGINALS
         </h1>
       </div>
 
@@ -414,7 +404,7 @@ const Projects = () => {
       />
 
       {/* ======================================================
-          DESKTOP INTERNSHIP GRID
+          DESKTOP PROJECT GRID
       ====================================================== */}
 
       <div
@@ -443,10 +433,10 @@ const Projects = () => {
         >
 
           {/* ==================================================
-              DESKTOP INTERNSHIP CARDS
+              DESKTOP PROJECT CARDS
           ================================================== */}
 
-          {internshipsData.map((project, i) => (
+          {projectsData.map((project, i) => (
             <div
               key={i}
               ref={(el) => {
@@ -582,35 +572,6 @@ const Projects = () => {
                     {project.title}
                   </h3>
 
-                  {/* COMPANY */}
-
-                  <div
-                    className="
-                      text-sm
-                      font-mono
-                      font-bold
-                      text-red-500
-                      uppercase
-                      tracking-wide
-                    "
-                  >
-                    {project.company}
-                  </div>
-
-                  {/* DURATION */}
-
-                  <div
-                    className="
-                      text-[11px]
-                      font-mono
-                      text-white/50
-                      uppercase
-                      tracking-wide
-                    "
-                  >
-                    {project.duration}
-                  </div>
-
                   <p
                     className="
                       text-xs
@@ -661,7 +622,9 @@ const Projects = () => {
 
                 </div>
 
-                {/* RED CORNER ACCENT */}
+                {/* ============================================
+                    RED CORNER ACCENT
+                ============================================ */}
 
                 <div
                   className="
@@ -686,7 +649,7 @@ const Projects = () => {
       </div>
 
       {/* ======================================================
-          MOBILE INTERNSHIP CAROUSEL
+          MOBILE PROJECT CAROUSEL
       ====================================================== */}
 
       <div
@@ -728,10 +691,10 @@ const Projects = () => {
         `}</style>
 
         {/* ==================================================
-            MOBILE INTERNSHIP CARDS
+            MOBILE PROJECT CARDS
         ================================================== */}
 
-        {internshipsData.map((project, i) => (
+        {projectsData.map((project, i) => (
           <div
             key={`mob-${i}`}
             ref={(el) => {
@@ -806,18 +769,6 @@ const Projects = () => {
 
               <div className="space-y-2">
 
-                <div
-                  className="
-                    text-[9px]
-                    font-mono
-                    uppercase
-                    tracking-widest
-                    text-white/40
-                  "
-                >
-                  {project.category}
-                </div>
-
                 <h3
                   className="
                     text-xl
@@ -827,33 +778,6 @@ const Projects = () => {
                 >
                   {project.title}
                 </h3>
-
-                {/* COMPANY */}
-
-                <div
-                  className="
-                    text-sm
-                    font-mono
-                    font-bold
-                    text-red-500
-                    uppercase
-                  "
-                >
-                  {project.company}
-                </div>
-
-                {/* DURATION */}
-
-                <div
-                  className="
-                    text-[10px]
-                    font-mono
-                    text-white/50
-                    uppercase
-                  "
-                >
-                  {project.duration}
-                </div>
 
                 <p
                   className="
