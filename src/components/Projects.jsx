@@ -1,14 +1,14 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 // ============================================================
-// INTERNSHIP DATA
+// INTERNSHIP / EXPERIENCE DATA
 // ============================================================
 
-const internshipsData = [
+const projectsData = [
   {
     title: "AWS Observability Pipeline",
     category: "CLOUD & OBSERVABILITY",
@@ -18,8 +18,9 @@ const internshipsData = [
       "Built an end-to-end AWS metrics observability pipeline using OpenTelemetry, AWS services, ClickHouse, and Grafana for collecting, storing, and visualizing infrastructure metrics.",
     tags: ["AWS", "OpenTelemetry", "Grafana", "ClickHouse"],
     match: "98%",
-    episode: "S01 E01"
+    episode: "S01 E01",
   },
+
   {
     title: "OpenTelemetry Metrics Platform",
     category: "OBSERVABILITY",
@@ -29,8 +30,9 @@ const internshipsData = [
       "Developed a push-based metrics pipeline using OpenTelemetry Python SDK and OTLP, integrating the OTel Collector with ClickHouse.",
     tags: ["Python", "OTel", "OTLP", "ClickHouse"],
     match: "97%",
-    episode: "S01 E02"
+    episode: "S01 E02",
   },
+
   {
     title: "Grafana Monitoring Dashboard",
     category: "MONITORING",
@@ -40,8 +42,9 @@ const internshipsData = [
       "Created monitoring dashboards for infrastructure and application metrics using Grafana and Prometheus.",
     tags: ["Grafana", "Prometheus", "Docker", "Monitoring"],
     match: "96%",
-    episode: "S01 E03"
+    episode: "S01 E03",
   },
+
   {
     title: "WordPress Web Development",
     category: "WEB DEVELOPMENT",
@@ -51,8 +54,9 @@ const internshipsData = [
       "Developed and customized responsive WordPress websites using Elementor, themes, plugins, custom CSS, forms and menus.",
     tags: ["WordPress", "Elementor", "CSS", "JavaScript"],
     match: "95%",
-    episode: "S01 E04"
+    episode: "S01 E04",
   },
+
   {
     title: "Kong API Observability",
     category: "API & DISTRIBUTED TRACING",
@@ -62,12 +66,12 @@ const internshipsData = [
       "Worked with Kong API Gateway and OpenTelemetry to build distributed tracing and observability for API-based services.",
     tags: ["Kong", "OpenTelemetry", "Tracing", "APIs"],
     match: "94%",
-    episode: "S01 E05"
-  }
+    episode: "S01 E05",
+  },
 ];
 
 // ============================================================
-// INTERNSHIPS COMPONENT
+// PROJECTS / INTERNSHIPS COMPONENT
 // ============================================================
 
 const Projects = () => {
@@ -106,10 +110,9 @@ const Projects = () => {
   // ============================================================
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-
+    const ctx = gsap.context(() => {
       // --------------------------------------------------------
-      // INITIAL CARD STATE
+      // INITIAL DESKTOP CARD STATE
       // --------------------------------------------------------
 
       cardsRef.current.forEach((card) => {
@@ -121,7 +124,7 @@ const Projects = () => {
           rotation: gsap.utils.random(-6, 6),
           scale: 0.85,
           x: 0,
-          y: 0
+          y: 0,
         });
       });
 
@@ -134,7 +137,7 @@ const Projects = () => {
       mm.add(
         {
           isDesktop: "(min-width: 768px)",
-          isMobile: "(max-width: 767px)"
+          isMobile: "(max-width: 767px)",
         },
         (context) => {
           const { isDesktop, isMobile } = context.conditions;
@@ -167,7 +170,7 @@ const Projects = () => {
 
                 onLeaveBack: () => {
                   if (floatTween) floatTween.kill();
-                }
+                },
               },
 
               onComplete: () => {
@@ -180,10 +183,10 @@ const Projects = () => {
                   ease: "sine.inOut",
                   stagger: {
                     amount: 1.5,
-                    from: "random"
-                  }
+                    from: "random",
+                  },
                 });
-              }
+              },
             });
 
             // ----------------------------------------------------
@@ -196,7 +199,7 @@ const Projects = () => {
               zIndex: 70,
               duration: 0.6,
               stagger: 0.04,
-              ease: "back.out(1.2)"
+              ease: "back.out(1.2)",
             });
 
             // ----------------------------------------------------
@@ -224,7 +227,7 @@ const Projects = () => {
                     (card) => card?.offsetHeight || 0
                   );
 
-                  const h = Math.max(...heights) || 240;
+                  const h = Math.max(...heights) || 300;
                   const gap = 40;
 
                   const { row } = getGridPos(i);
@@ -239,10 +242,10 @@ const Projects = () => {
 
                 stagger: {
                   amount: 0.4,
-                  from: "center"
+                  from: "center",
                 },
 
-                ease: "expo.out"
+                ease: "expo.out",
               },
               "-=0.2"
             );
@@ -253,8 +256,8 @@ const Projects = () => {
           // ======================================================
 
           if (isMobile) {
-            const cardW = window.innerWidth * 0.8;
-            const gap = 20;
+            const cardW = window.innerWidth * 0.78;
+            const gap = 24;
 
             mobileCardsRef.current.forEach((card, i) => {
               if (!card) return;
@@ -264,15 +267,15 @@ const Projects = () => {
                 y: 0,
                 scale: 0.4,
                 opacity: 0,
-                rotation: gsap.utils.random(-15, 15)
+                rotation: gsap.utils.random(-15, 15),
               });
             });
 
             const tl = gsap.timeline({
               scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top 60%"
-              }
+                start: "top 60%",
+              },
             });
 
             // ----------------------------------------------------
@@ -280,12 +283,12 @@ const Projects = () => {
             // ----------------------------------------------------
 
             tl.to(mobileCardsRef.current, {
-              y: -100,
+              y: 0,
               opacity: 1,
               scale: 0.85,
               duration: 0.6,
               stagger: 0.05,
-              ease: "back.out(1.2)"
+              ease: "back.out(1.2)",
             });
 
             // ----------------------------------------------------
@@ -319,14 +322,13 @@ const Projects = () => {
                     mobileCarouselRef.current.style.overflowX = "auto";
                     mobileCarouselRef.current.style.pointerEvents = "auto";
                   }
-                }
+                },
               },
               "-=0.2"
             );
           }
         }
       );
-
     }, containerRef);
 
     return () => ctx.revert();
@@ -338,7 +340,7 @@ const Projects = () => {
 
   return (
     <section
-      id="projects"
+      id="internships"
       ref={containerRef}
       className="
         bg-[#0b0b0b]
@@ -357,7 +359,6 @@ const Projects = () => {
         select-none
       "
     >
-
       {/* ======================================================
           BACKGROUND TITLE
       ====================================================== */}
@@ -388,7 +389,7 @@ const Projects = () => {
             uppercase
           "
         >
-          EXPERIENCE
+          ORIGINALS
         </h1>
       </div>
 
@@ -414,7 +415,7 @@ const Projects = () => {
       />
 
       {/* ======================================================
-          DESKTOP INTERNSHIP GRID
+          DESKTOP PROJECT GRID
       ====================================================== */}
 
       <div
@@ -430,7 +431,6 @@ const Projects = () => {
           z-10
         "
       >
-
         {/* Origin point for desktop card animation */}
 
         <div
@@ -441,12 +441,11 @@ const Projects = () => {
             transform-style-3d
           "
         >
-
           {/* ==================================================
-              DESKTOP INTERNSHIP CARDS
+              DESKTOP PROJECT CARDS
           ================================================== */}
 
-          {internshipsData.map((project, i) => (
+          {projectsData.map((project, i) => (
             <div
               key={i}
               ref={(el) => {
@@ -459,18 +458,18 @@ const Projects = () => {
                 w-[80vw]
                 md:w-[33vw]
                 max-w-[380px]
-                aspect-[16/10]
+                min-h-[300px]
                 will-change-transform
               "
               style={{
-                zIndex: 10 + i
+                zIndex: 10 + i,
               }}
             >
-
               <div
                 className="
                   w-full
                   h-full
+                  min-h-[300px]
                   rounded-[24px]
                   overflow-hidden
                   border
@@ -491,16 +490,14 @@ const Projects = () => {
                   p-7
                   flex
                   flex-col
-                  justify-between
+                  gap-4
                 "
               >
-
                 {/* ============================================
                     CARD HEADER
                 ============================================ */}
 
-                <div className="flex items-center justify-between">
-
+                <div className="flex items-center justify-between shrink-0">
                   <span
                     className="
                       text-[10px]
@@ -521,7 +518,6 @@ const Projects = () => {
                   </span>
 
                   <div className="flex items-center gap-2">
-
                     <span
                       className="
                         text-xs
@@ -545,16 +541,15 @@ const Projects = () => {
                     >
                       HD
                     </span>
-
                   </div>
-
                 </div>
 
                 {/* ============================================
                     CARD CONTENT
                 ============================================ */}
 
-                <div className="space-y-2 my-auto">
+                <div className="space-y-2 flex-1">
+                  {/* CATEGORY */}
 
                   <div
                     className="
@@ -567,6 +562,8 @@ const Projects = () => {
                   >
                     {project.category}
                   </div>
+
+                  {/* TITLE */}
 
                   <h3
                     className="
@@ -584,32 +581,35 @@ const Projects = () => {
 
                   {/* COMPANY */}
 
-                  <div
-                    className="
-                      text-sm
-                      font-mono
-                      font-bold
-                      text-red-500
-                      uppercase
-                      tracking-wide
-                    "
-                  >
-                    {project.company}
+                  <div className="flex flex-col gap-1 pt-1">
+                    <span
+                      className="
+                        text-sm
+                        font-mono
+                        font-semibold
+                        text-white/90
+                        uppercase
+                      "
+                    >
+                      {project.company}
+                    </span>
+
+                    {/* DURATION */}
+
+                    <span
+                      className="
+                        text-[10px]
+                        font-mono
+                        text-white/50
+                        uppercase
+                        tracking-wider
+                      "
+                    >
+                      {project.duration}
+                    </span>
                   </div>
 
-                  {/* DURATION */}
-
-                  <div
-                    className="
-                      text-[11px]
-                      font-mono
-                      text-white/50
-                      uppercase
-                      tracking-wide
-                    "
-                  >
-                    {project.duration}
-                  </div>
+                  {/* DESCRIPTION */}
 
                   <p
                     className="
@@ -618,11 +618,11 @@ const Projects = () => {
                       font-light
                       leading-relaxed
                       line-clamp-2
+                      pt-1
                     "
                   >
                     {project.description}
                   </p>
-
                 </div>
 
                 {/* ============================================
@@ -637,9 +637,9 @@ const Projects = () => {
                     pt-3
                     border-t
                     border-white/10
+                    shrink-0
                   "
                 >
-
                   {project.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
@@ -658,10 +658,11 @@ const Projects = () => {
                       {tag}
                     </span>
                   ))}
-
                 </div>
 
-                {/* RED CORNER ACCENT */}
+                {/* ============================================
+                    RED CORNER ACCENT
+                ============================================ */}
 
                 <div
                   className="
@@ -676,17 +677,14 @@ const Projects = () => {
                     transition-all
                   "
                 />
-
               </div>
-
             </div>
           ))}
-
         </div>
       </div>
 
       {/* ======================================================
-          MOBILE INTERNSHIP CAROUSEL
+          MOBILE PROJECT CAROUSEL
       ====================================================== */}
 
       <div
@@ -704,7 +702,7 @@ const Projects = () => {
           flex
           items-center
           gap-6
-          px-[12.5vw]
+          px-[11vw]
           pointer-events-none
           z-[100]
           snap-x
@@ -713,7 +711,6 @@ const Projects = () => {
           hide-scrollbar
         "
       >
-
         {/* Hide scrollbar */}
 
         <style>{`
@@ -728,10 +725,10 @@ const Projects = () => {
         `}</style>
 
         {/* ==================================================
-            MOBILE INTERNSHIP CARDS
+            MOBILE PROJECT CARDS
         ================================================== */}
 
-        {internshipsData.map((project, i) => (
+        {projectsData.map((project, i) => (
           <div
             key={`mob-${i}`}
             ref={(el) => {
@@ -740,18 +737,17 @@ const Projects = () => {
             className="
               shrink-0
               w-[78vw]
-              aspect-[16/11]
+              min-h-[360px]
               snap-center
               will-change-transform
               relative
               z-10
             "
           >
-
             <div
               className="
                 w-full
-                h-full
+                min-h-[360px]
                 rounded-[24px]
                 overflow-hidden
                 border
@@ -760,17 +756,15 @@ const Projects = () => {
                 p-6
                 flex
                 flex-col
-                justify-between
+                gap-4
                 shadow-[0_20px_40px_rgba(0,0,0,0.9)]
               "
             >
-
               {/* ============================================
                   MOBILE CARD HEADER
               ============================================ */}
 
-              <div className="flex items-center justify-between">
-
+              <div className="flex items-center justify-between shrink-0">
                 <span
                   className="
                     text-[10px]
@@ -797,14 +791,14 @@ const Projects = () => {
                 >
                   {project.match} Match
                 </span>
-
               </div>
 
               {/* ============================================
                   MOBILE CARD CONTENT
               ============================================ */}
 
-              <div className="space-y-2">
+              <div className="space-y-2 flex-1">
+                {/* CATEGORY */}
 
                 <div
                   className="
@@ -818,11 +812,14 @@ const Projects = () => {
                   {project.category}
                 </div>
 
+                {/* TITLE */}
+
                 <h3
                   className="
                     text-xl
                     font-black
                     text-white
+                    tracking-tight
                   "
                 >
                   {project.title}
@@ -830,42 +827,48 @@ const Projects = () => {
 
                 {/* COMPANY */}
 
-                <div
-                  className="
-                    text-sm
-                    font-mono
-                    font-bold
-                    text-red-500
-                    uppercase
-                  "
-                >
-                  {project.company}
+                <div className="flex flex-col gap-1 pt-1">
+                  <span
+                    className="
+                      text-xs
+                      font-mono
+                      font-semibold
+                      text-white/90
+                      uppercase
+                    "
+                  >
+                    {project.company}
+                  </span>
+
+                  {/* DURATION */}
+
+                  <span
+                    className="
+                      text-[9px]
+                      font-mono
+                      text-white/50
+                      uppercase
+                      tracking-wider
+                    "
+                  >
+                    {project.duration}
+                  </span>
                 </div>
 
-                {/* DURATION */}
-
-                <div
-                  className="
-                    text-[10px]
-                    font-mono
-                    text-white/50
-                    uppercase
-                  "
-                >
-                  {project.duration}
-                </div>
+                {/* DESCRIPTION */}
 
                 <p
                   className="
                     text-xs
                     text-white/70
                     font-light
-                    line-clamp-2
+                    leading-relaxed
+                    line-clamp-3
+                    pt-1
                   "
                 >
                   {project.description}
                 </p>
-
               </div>
 
               {/* ============================================
@@ -877,12 +880,12 @@ const Projects = () => {
                   flex
                   flex-wrap
                   gap-1
-                  pt-2
+                  pt-3
                   border-t
                   border-white/10
+                  shrink-0
                 "
               >
-
                 {project.tags.slice(0, 3).map((tag, tIdx) => (
                   <span
                     key={tIdx}
@@ -899,16 +902,11 @@ const Projects = () => {
                     {tag}
                   </span>
                 ))}
-
               </div>
-
             </div>
-
           </div>
         ))}
-
       </div>
-
     </section>
   );
 };
