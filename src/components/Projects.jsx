@@ -586,8 +586,8 @@ const Projects = () => {
                       className="
                         text-sm
                         font-mono
-                        font-semibold
-                        text-white/90
+                        font-bold
+                        text-white
                         uppercase
                       "
                     >
@@ -599,7 +599,7 @@ const Projects = () => {
                     <span
                       className="
                         text-[10px]
-                        font-mono
+                        font-bold
                         text-white/50
                         uppercase
                         tracking-wider
@@ -615,7 +615,7 @@ const Projects = () => {
                     className="
                       text-xs
                       text-white/70
-                      font-light
+                      font-bold
                       leading-relaxed
                       line-clamp-2
                       pt-1
