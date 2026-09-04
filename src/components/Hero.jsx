@@ -522,7 +522,7 @@ const Hero = () => {
             <div className="hero-anim-item flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
 
               <a
-                href="#projects"
+                href="#internships"
                 className="px-8 py-3.5 bg-white text-black font-bold text-xs uppercase tracking-widest rounded hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_10px_35px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2 hover:scale-105 active:scale-95 w-full sm:w-auto"
               >
 
@@ -533,7 +533,7 @@ const Hero = () => {
                   <path d="M8 5v14l11-7z" />
                 </svg>
 
-                View Projects
+                View internships
 
               </a>
 
@@ -739,10 +739,10 @@ const Hero = () => {
           </a>
 
           <a
-            href="#projects"
+            href="#internships"
             className="hover:text-red-500 transition-colors"
           >
-            Projects
+            internships
           </a>
 
           <a
