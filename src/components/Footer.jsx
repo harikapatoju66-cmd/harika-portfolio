@@ -46,6 +46,12 @@ const Footer = () => {
             >
               Expertise
             </a>
+            <a
+              href="#skills"
+              className="hover:text-red-500 transition-colors"
+            >
+              skills
+            </a>
 
             <a
               href="#internships"
