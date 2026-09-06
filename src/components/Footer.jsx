@@ -14,6 +14,7 @@ const Footer = () => {
 
             <div className="text-2xl font-black text-red-600 tracking-tighter flex items-center gap-2 drop-shadow-[0_2px_15px_rgba(220,38,38,0.9)]">
               HARIKA
+
               <span className="w-1.5 h-1.5 rounded-full bg-white inline-block"></span>
             </div>
 
@@ -23,9 +24,11 @@ const Footer = () => {
 
           </div>
 
+
           {/* Quick Navigation */}
           <nav className="flex flex-wrap gap-6 md:gap-8 text-xs font-mono uppercase tracking-widest text-white/70">
 
+            {/* Home */}
             <a
               href="#home"
               className="hover:text-red-500 transition-colors"
@@ -33,6 +36,7 @@ const Footer = () => {
               Home
             </a>
 
+            {/* About */}
             <a
               href="#about"
               className="hover:text-red-500 transition-colors"
@@ -40,26 +44,31 @@ const Footer = () => {
               About
             </a>
 
+            {/* Expertise */}
             <a
               href="#expertise"
               className="hover:text-red-500 transition-colors"
             >
               Expertise
             </a>
+
+            {/* Skills */}
             <a
               href="#skills"
               className="hover:text-red-500 transition-colors"
             >
-              skills
+              Skills
             </a>
 
+            {/* Internships */}
             <a
               href="#internships"
               className="hover:text-red-500 transition-colors"
             >
-              internships
+              Internships
             </a>
 
+            {/* Contact */}
             <a
               href="#contact"
               className="hover:text-red-500 transition-colors"
@@ -71,12 +80,14 @@ const Footer = () => {
 
         </div>
 
+
         {/* Middle Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-xs font-mono text-white/60">
 
           {/* Social Links */}
           <div className="flex flex-wrap items-center gap-6">
 
+            {/* GitHub */}
             <a
               href="https://github.com/harikapatoju66-cmd/"
               target="_blank"
@@ -86,6 +97,7 @@ const Footer = () => {
               GitHub //
             </a>
 
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/harika-patoju-968766306/"
               target="_blank"
@@ -95,6 +107,7 @@ const Footer = () => {
               LinkedIn //
             </a>
 
+            {/* Email */}
             <a
               href="mailto:harikapatoju66@gmail.com"
               className="hover:text-red-500 transition-colors uppercase tracking-wider"
@@ -104,20 +117,24 @@ const Footer = () => {
 
           </div>
 
+
           {/* Location */}
           <div className="text-white/40 tracking-widest uppercase">
-            LOCATION: Andhra Pradesh,INDIA
+            LOCATION: Andhra Pradesh, INDIA
           </div>
 
         </div>
 
+
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/5 text-[11px] font-mono text-white/40 uppercase tracking-widest">
 
+          {/* Copyright */}
           <p>
             &copy; {new Date().getFullYear()} HARIKA PATOJU. ALL RIGHTS RESERVED.
           </p>
 
+          {/* Built With */}
           <p className="text-red-500/80">
             STREAMING WORLDWIDE &bull; BUILT WITH REACT & GSAP
           </p>
