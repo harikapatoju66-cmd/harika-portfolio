@@ -634,6 +634,7 @@ const Projects = () => {
                     flex
                     flex-wrap
                     gap-1.5
+                    font-semibold
                     pt-3
                     border-t
                     border-white/10

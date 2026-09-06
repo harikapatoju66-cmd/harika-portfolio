@@ -179,7 +179,7 @@ const Skills = () => {
     <section 
       id="skills"
       ref={sectionRef} 
-      className="relative w-full h-screen bg-[#0b0b0b] text-white overflow-hidden flex items-center justify-center md:[perspective:1000px] select-none"
+      className="relative w-full min-h-screen bg-[#0b0b0b] text-white overflow-hidden flex items-center justify-center md:[perspective:1000px] select-none"
     >
       {/* Dynamic Netflix Dark Background Vignettes */}
       {skillCategories.map((_, i) => (
@@ -209,8 +209,31 @@ const Skills = () => {
 
       {/* Carousel Container */}
       <div 
-        className="relative w-full h-full flex md:items-center md:justify-center z-10 md:[transform-style:preserve-3d] overflow-x-auto overflow-y-hidden md:overflow-visible snap-x snap-mandatory scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] items-center px-[10vw] md:px-0 gap-4 md:gap-0 touch-pan-x"
-        onScroll={handleScroll}
+        className="
+  relative
+  w-full
+  h-full
+  flex
+  md:items-center
+  md:justify-center
+  z-10
+  md:[transform-style:preserve-3d]
+  overflow-x-auto
+  md:overflow-visible
+  snap-x
+  snap-mandatory
+  scrollbar-hide
+  [&::-webkit-scrollbar]:hidden
+  [-ms-overflow-style:none]
+  [scrollbar-width:none]
+  items-center
+  px-[10vw]
+  md:px-0
+  gap-4
+  md:gap-0
+  touch-pan-x 
+  touch-pan-y
+"
       >
         {skillCategories.map((category, i) => (
           <div 
